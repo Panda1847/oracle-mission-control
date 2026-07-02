@@ -1,0 +1,5 @@
+environment: development
+
+logging:
+  level: DEBUG
+

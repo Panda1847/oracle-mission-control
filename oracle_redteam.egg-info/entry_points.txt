@@ -1,0 +1,2 @@
+[console_scripts]
+oracle = oracle.cli.main:main

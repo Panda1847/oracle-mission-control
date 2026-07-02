@@ -1,0 +1,12 @@
+workers:
+  mode: local
+  heartbeat_seconds: 30
+  heartbeat_timeout_seconds: 45
+  shared_secret: oracle-worker-2f8d3c91e5a74b89
+  callback_host: 127.0.0.1
+  callback_port: 0
+  local_worker_id: local-node
+  tls_enabled: false
+  tls_ca_file: ""
+  tls_certfile: ""
+  tls_keyfile: ""

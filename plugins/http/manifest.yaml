@@ -1,0 +1,21 @@
+name: http
+version: "1.0.0"
+category: web
+capabilities:
+  - http_probe
+  - banner_grab
+  - service_validation
+required_binaries:
+  - curl
+risk_level: low
+expected_artifacts:
+  - http_headers
+  - http_status
+parser_schema: schema.json
+timeout: 20
+retry_policy:
+  max_attempts: 2
+  timeout_multiplier: 1.5
+confidence_weight: 0.88
+approval_required: false
+

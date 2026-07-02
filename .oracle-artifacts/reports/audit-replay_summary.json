@@ -1,0 +1,56 @@
+{
+  "attack_surface": [
+    {
+      "host": "10.0.0.41",
+      "os_guess": "Linux",
+      "ports": [
+        "80/http"
+      ]
+    }
+  ],
+  "executive_summary": "Mission audit-replay completed with 1 discovered hosts and 3 findings.\nCritical findings: 0. High findings: 0.\n- MEDIUM: Web path: /admin [200] (10.0.0.41:80)\n- INFO: Web service: HTTP on 10.0.0.41:80 (10.0.0.41:80)\n- INFO: HTTP 200 \u2014 Server: Apache (10.0.0.41:80)",
+  "mission": "audit-replay",
+  "stats": {
+    "contradictions": 0,
+    "critical": 0,
+    "evidence_records": 7,
+    "findings": 3,
+    "high": 0,
+    "hosts": 1
+  },
+  "top_findings": [
+    {
+      "description": "HTTP 200 at /admin",
+      "evidence": "",
+      "fid": "1f6113d9",
+      "host": "10.0.0.41",
+      "plugin": "fuzz",
+      "port": 80,
+      "severity": "MEDIUM",
+      "title": "Web path: /admin [200]",
+      "ts": "02:05:35"
+    },
+    {
+      "description": "Server: Apache",
+      "evidence": "",
+      "fid": "2ffbac70",
+      "host": "10.0.0.41",
+      "plugin": "nmap",
+      "port": 80,
+      "severity": "INFO",
+      "title": "Web service: HTTP on 10.0.0.41:80",
+      "ts": "02:05:34"
+    },
+    {
+      "description": "Status 200",
+      "evidence": "",
+      "fid": "5aefdfcb",
+      "host": "10.0.0.41",
+      "plugin": "http",
+      "port": 80,
+      "severity": "INFO",
+      "title": "HTTP 200 \u2014 Server: Apache",
+      "ts": "02:05:34"
+    }
+  ]
+}

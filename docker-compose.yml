@@ -1,0 +1,63 @@
+version: "3.9"
+
+services:
+  oracle-control-plane:
+    build: .
+    container_name: oracle-control-plane
+    environment:
+      - ORACLE_API_KEY=${ORACLE_API_KEY:-}
+      - NVIDIA_API_KEY=${NVIDIA_API_KEY:-}
+      - ORACLE_NIM_MODEL=${ORACLE_NIM_MODEL:-meta/llama-3.1-70b-instruct}
+      - ORACLE_AI_BACKEND=${ORACLE_AI_BACKEND:-nim}
+      - ORACLE_ENV=production
+    volumes:
+      - oracle_data:/root/.oracle
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    command: >
+      --scope ${ORACLE_SCOPE:-127.0.0.1}
+      --web
+      --web-port 5000
+      ${ORACLE_EXTRA_ARGS:-}
+    stdin_open: true
+    tty: true
+
+  oracle-runtime-go:
+    image: golang:1.24
+    container_name: oracle-runtime-go
+    working_dir: /workspace/runtime-go
+    volumes:
+      - .:/workspace
+    command: go run .
+
+  redis:
+    image: redis:7-alpine
+    container_name: oracle-redis
+    ports:
+      - "6379:6379"
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: oracle-prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./telemetry:/etc/prometheus
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: oracle-grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
+volumes:
+  oracle_data:

@@ -1,0 +1,141 @@
+{
+  "evidence": {
+    "count": 0,
+    "evidence_records": [],
+    "iocs": []
+  },
+  "intelligence_report": {
+    "attack_graph": {
+      "edges": [],
+      "nodes": [],
+      "summary": {
+        "candidate_count": 0,
+        "edges": 0,
+        "highest_path_score": 0.0,
+        "nodes": 0,
+        "weighted_edges": 0
+      },
+      "top_paths": []
+    },
+    "attack_graph_summary": {
+      "candidate_count": 0,
+      "edges": 0,
+      "highest_path_score": 0.0,
+      "nodes": 0,
+      "top_paths": [],
+      "weighted_edges": 0
+    },
+    "evidence_summary": {
+      "by_entity": {},
+      "contradictions": 0,
+      "count": 0,
+      "high_confidence": 0
+    },
+    "executive_summary": "Mission missing-bin identified 0 host(s) and 0 finding(s).\nCritical findings: 0; High findings: 0.",
+    "generated_at": "2026-07-02T02:05:31Z",
+    "graph_state": {
+      "contradictions": 0,
+      "evidence_records": 0,
+      "findings": 0,
+      "hosts": 0
+    },
+    "machine_package": {
+      "attack_graph": {
+        "edges": [],
+        "nodes": [],
+        "summary": {
+          "candidate_count": 0,
+          "edges": 0,
+          "highest_path_score": 0.0,
+          "nodes": 0,
+          "weighted_edges": 0
+        },
+        "top_paths": []
+      },
+      "attack_graph_summary": {
+        "candidate_count": 0,
+        "edges": 0,
+        "highest_path_score": 0.0,
+        "nodes": 0,
+        "top_paths": [],
+        "weighted_edges": 0
+      },
+      "evidence_summary": {
+        "by_entity": {},
+        "contradictions": 0,
+        "count": 0,
+        "high_confidence": 0
+      },
+      "generated_at": "2026-07-02T02:05:31Z",
+      "graph_state": {
+        "contradictions": 0,
+        "evidence_records": 0,
+        "findings": 0,
+        "hosts": 0
+      },
+      "mission": "missing-bin",
+      "ranked_findings": [],
+      "remediation": [
+        "Maintain least-privilege network exposure and continue deterministic validation cycles."
+      ],
+      "report_schema_version": "phase1.v1",
+      "snapshot": {
+        "build_identity": {
+          "git_hash": "unknown",
+          "schema_version": "oracle-delivery.v1",
+          "semantic_version": "3.2.0"
+        },
+        "iterations": 2,
+        "phase": "FAILED",
+        "plugins": [],
+        "runtime_mode": "live",
+        "state_hash": "b667d3948d8a92a5cf4ee10875529a37b5388f4042e3ca0af9a35cc23a807c2c",
+        "status": "stopped"
+      },
+      "stats": {
+        "contradictions": 0,
+        "critical": 0,
+        "evidence_records": 0,
+        "findings": 0,
+        "high": 0,
+        "hosts": 0
+      },
+      "top_hosts": []
+    },
+    "mission": "missing-bin",
+    "ranked_findings": [],
+    "remediation_text": [
+      "Maintain least-privilege network exposure and continue deterministic validation cycles."
+    ],
+    "report_schema_version": "phase1.v1",
+    "top_hosts": []
+  },
+  "mission": "missing-bin",
+  "snapshot": {
+    "build_identity": {
+      "git_hash": "unknown",
+      "schema_version": "oracle-delivery.v1",
+      "semantic_version": "3.2.0"
+    },
+    "iterations": 2,
+    "phase": "FAILED",
+    "plugins": [],
+    "runtime_mode": "live",
+    "state_hash": "b667d3948d8a92a5cf4ee10875529a37b5388f4042e3ca0af9a35cc23a807c2c",
+    "status": "stopped"
+  },
+  "summary": {
+    "attack_surface": [],
+    "executive_summary": "Mission missing-bin completed with 0 discovered hosts and 0 findings.\nCritical findings: 0. High findings: 0.",
+    "mission": "missing-bin",
+    "stats": {
+      "contradictions": 0,
+      "critical": 0,
+      "evidence_records": 0,
+      "findings": 0,
+      "high": 0,
+      "hosts": 0
+    },
+    "top_findings": []
+  }
+}

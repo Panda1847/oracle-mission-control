@@ -1,0 +1,344 @@
+{
+  "evidence": [
+    {
+      "confidence": 0.943,
+      "contradiction": "",
+      "entity": "host",
+      "mission_id": "audit-provenance",
+      "payload": {
+        "alive": true,
+        "os_guess": "Linux"
+      },
+      "provenance": {
+        "hash": "7b11c26b84b9586a68b36bf0078408d8117469d14bcaf56b39e49d092b71115d",
+        "mission_id": "audit-provenance",
+        "payload": {
+          "alive": true,
+          "os_guess": "Linux"
+        },
+        "prev_hash": "",
+        "source_plugin": "manual",
+        "timestamp": "2026-07-02T02:05:35.561412+00:00"
+      },
+      "record_id": "067fd5b940a5471d8bea6fc437cd0a6c",
+      "related_entities": [],
+      "source_plugin": "manual",
+      "timestamp": "2026-07-02T02:05:35.561402+00:00",
+      "ttl_seconds": 604800,
+      "value": "10.0.0.42"
+    },
+    {
+      "confidence": 0.91,
+      "contradiction": "",
+      "entity": "service",
+      "mission_id": "audit-provenance",
+      "payload": {
+        "host": "10.0.0.42",
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "state": "open",
+        "version": "Apache"
+      },
+      "provenance": {
+        "hash": "e468a18ee0c523f4290a2208fc63a15f6bc8ba48de255c01cf986a80bfe89992",
+        "mission_id": "audit-provenance",
+        "payload": {
+          "host": "10.0.0.42",
+          "port": 80,
+          "protocol": "tcp",
+          "service": "http",
+          "state": "open",
+          "version": "Apache"
+        },
+        "prev_hash": "7b11c26b84b9586a68b36bf0078408d8117469d14bcaf56b39e49d092b71115d",
+        "source_plugin": "nmap",
+        "timestamp": "2026-07-02T02:05:35.563180+00:00"
+      },
+      "record_id": "638118e7fbaa4233af6fec0a82f75d36",
+      "related_entities": [
+        "10.0.0.42"
+      ],
+      "source_plugin": "nmap",
+      "timestamp": "2026-07-02T02:05:35.563164+00:00",
+      "ttl_seconds": 1209600,
+      "value": "10.0.0.42:80/tcp"
+    },
+    {
+      "confidence": 0.896,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "audit-provenance",
+      "payload": {
+        "description": "Server: Apache",
+        "host": "10.0.0.42",
+        "port": 80,
+        "severity": "INFO",
+        "title": "Web service: HTTP on 10.0.0.42:80"
+      },
+      "provenance": {
+        "hash": "f426257e7b11f6195fe7bc7a845ddf93f71d6aab7b586f13eb42a7ad47e1a300",
+        "mission_id": "audit-provenance",
+        "payload": {
+          "description": "Server: Apache",
+          "host": "10.0.0.42",
+          "port": 80,
+          "severity": "INFO",
+          "title": "Web service: HTTP on 10.0.0.42:80"
+        },
+        "prev_hash": "e468a18ee0c523f4290a2208fc63a15f6bc8ba48de255c01cf986a80bfe89992",
+        "source_plugin": "nmap",
+        "timestamp": "2026-07-02T02:05:35.565490+00:00"
+      },
+      "record_id": "f0604f1b302549ae9f0a9b25fb229d84",
+      "related_entities": [
+        "10.0.0.42"
+      ],
+      "source_plugin": "nmap",
+      "timestamp": "2026-07-02T02:05:35.565477+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.42:80:Web service: HTTP on 10.0.0.42:80"
+    },
+    {
+      "confidence": 0.84,
+      "contradiction": "",
+      "entity": "service",
+      "mission_id": "audit-provenance",
+      "payload": {
+        "host": "10.0.0.42",
+        "port": 80,
+        "service": "http",
+        "state": "open",
+        "status_code": 200,
+        "version": "Apache"
+      },
+      "provenance": {
+        "hash": "c8ca9201bd362ef784940659d00d85f1e067e1e9c4a481787408668f7f7c2054",
+        "mission_id": "audit-provenance",
+        "payload": {
+          "host": "10.0.0.42",
+          "port": 80,
+          "service": "http",
+          "state": "open",
+          "status_code": 200,
+          "version": "Apache"
+        },
+        "prev_hash": "5e1ec751b5e4021ea2861cc9a0fdb04b2a215ed1e059b509114925fc8642b894",
+        "source_plugin": "http",
+        "timestamp": "2026-07-02T02:05:36.209535+00:00"
+      },
+      "record_id": "61f4bf92d6be4459a0ec1ea61571cd96",
+      "related_entities": [
+        "10.0.0.42"
+      ],
+      "source_plugin": "http",
+      "timestamp": "2026-07-02T02:05:36.209527+00:00",
+      "ttl_seconds": 1209600,
+      "value": "10.0.0.42:80/tcp"
+    },
+    {
+      "confidence": 0.8505,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "audit-provenance",
+      "payload": {
+        "description": "Status 200",
+        "host": "10.0.0.42",
+        "port": 80,
+        "severity": "INFO",
+        "title": "HTTP 200 \u2014 Server: Apache"
+      },
+      "provenance": {
+        "hash": "23a5910a6e84bc0445a8f7e9c738635645e9caedfe2f8f296aea612f49dff961",
+        "mission_id": "audit-provenance",
+        "payload": {
+          "description": "Status 200",
+          "host": "10.0.0.42",
+          "port": 80,
+          "severity": "INFO",
+          "title": "HTTP 200 \u2014 Server: Apache"
+        },
+        "prev_hash": "e30075cf9f6f956a207af0f00ccb87410db4f1efccb264aa21d79b5d8c090393",
+        "source_plugin": "http",
+        "timestamp": "2026-07-02T02:05:35.779117+00:00"
+      },
+      "record_id": "70684766eee14a8f83a71dc5d61cc0fe",
+      "related_entities": [
+        "10.0.0.42"
+      ],
+      "source_plugin": "http",
+      "timestamp": "2026-07-02T02:05:35.779102+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.42:80:HTTP 200 \u2014 Server: Apache"
+    },
+    {
+      "confidence": 0.76,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "audit-provenance",
+      "payload": {
+        "host": "10.0.0.42",
+        "path": "/admin",
+        "port": 80,
+        "status": 200
+      },
+      "provenance": {
+        "hash": "d375bdb59f14ec5dc51bb047baf22e75ea81e17e1e3eea3fea5c6391e6801fad",
+        "mission_id": "audit-provenance",
+        "payload": {
+          "host": "10.0.0.42",
+          "path": "/admin",
+          "port": 80,
+          "status": 200
+        },
+        "prev_hash": "23a5910a6e84bc0445a8f7e9c738635645e9caedfe2f8f296aea612f49dff961",
+        "source_plugin": "fuzz",
+        "timestamp": "2026-07-02T02:05:35.991638+00:00"
+      },
+      "record_id": "71c3c6c24f9c4e6da9a2489cb28008f8",
+      "related_entities": [
+        "10.0.0.42"
+      ],
+      "source_plugin": "fuzz",
+      "timestamp": "2026-07-02T02:05:35.991629+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.42:80:/admin"
+    },
+    {
+      "confidence": 0.7985,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "audit-provenance",
+      "payload": {
+        "description": "HTTP 200 at /admin",
+        "host": "10.0.0.42",
+        "port": 80,
+        "severity": "MEDIUM",
+        "title": "Web path: /admin [200]"
+      },
+      "provenance": {
+        "hash": "5e1ec751b5e4021ea2861cc9a0fdb04b2a215ed1e059b509114925fc8642b894",
+        "mission_id": "audit-provenance",
+        "payload": {
+          "description": "HTTP 200 at /admin",
+          "host": "10.0.0.42",
+          "port": 80,
+          "severity": "MEDIUM",
+          "title": "Web path: /admin [200]"
+        },
+        "prev_hash": "d375bdb59f14ec5dc51bb047baf22e75ea81e17e1e3eea3fea5c6391e6801fad",
+        "source_plugin": "fuzz",
+        "timestamp": "2026-07-02T02:05:35.994949+00:00"
+      },
+      "record_id": "7fdf5a778476478d9f6d74c3385d8998",
+      "related_entities": [
+        "10.0.0.42"
+      ],
+      "source_plugin": "fuzz",
+      "timestamp": "2026-07-02T02:05:35.994930+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.42:80:Web path: /admin [200]"
+    }
+  ],
+  "findings": [
+    {
+      "description": "Server: Apache",
+      "evidence": "",
+      "fid": "fe08b0c0",
+      "host": "10.0.0.42",
+      "plugin": "nmap",
+      "port": 80,
+      "severity": "INFO",
+      "title": "Web service: HTTP on 10.0.0.42:80",
+      "ts": "02:05:35"
+    },
+    {
+      "description": "Status 200",
+      "evidence": "",
+      "fid": "1de0d5ae",
+      "host": "10.0.0.42",
+      "plugin": "http",
+      "port": 80,
+      "severity": "INFO",
+      "title": "HTTP 200 \u2014 Server: Apache",
+      "ts": "02:05:35"
+    },
+    {
+      "description": "HTTP 200 at /admin",
+      "evidence": "",
+      "fid": "255db941",
+      "host": "10.0.0.42",
+      "plugin": "fuzz",
+      "port": 80,
+      "severity": "MEDIUM",
+      "title": "Web path: /admin [200]",
+      "ts": "02:05:35"
+    }
+  ],
+  "hosts": {
+    "10.0.0.42": {
+      "alive": true,
+      "hostname": "",
+      "ip": "10.0.0.42",
+      "notes": "",
+      "os_guess": "Linux",
+      "ports": [
+        {
+          "cve_sources": [],
+          "cves": [],
+          "cvss": null,
+          "exploitability": null,
+          "port": 80,
+          "protocol": "tcp",
+          "service": "http",
+          "state": "open",
+          "version": "Apache"
+        }
+      ],
+      "tags": []
+    }
+  },
+  "latest_report": {},
+  "stats": {
+    "contradictions": 0,
+    "critical": 0,
+    "evidence_records": 7,
+    "findings": 3,
+    "high": 0,
+    "hosts": 1
+  },
+  "topology": {
+    "edges": [
+      {
+        "from": "subnet:10.0.0.0/24",
+        "kind": "contains",
+        "to": "host:10.0.0.42"
+      },
+      {
+        "from": "host:10.0.0.42",
+        "kind": "exposes",
+        "to": "svc:10.0.0.42:http:80"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "subnet:10.0.0.0/24",
+        "kind": "subnet",
+        "label": "10.0.0.0/24",
+        "severity": "INFO"
+      },
+      {
+        "id": "host:10.0.0.42",
+        "kind": "host",
+        "label": "10.0.0.42",
+        "severity": "MEDIUM"
+      },
+      {
+        "id": "svc:10.0.0.42:http:80",
+        "kind": "service",
+        "label": "http:80",
+        "severity": "MEDIUM"
+      }
+    ]
+  }
+}

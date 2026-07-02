@@ -1,0 +1,11 @@
+{
+  "title": "ORACLE Enterprise Overview",
+  "panels": [
+    "mission_duration_seconds",
+    "mission_events_total",
+    "plugin_runtime_seconds",
+    "worker_health_score",
+    "planner_gate_confidence"
+  ]
+}
+

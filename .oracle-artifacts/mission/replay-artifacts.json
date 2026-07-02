@@ -1,0 +1,344 @@
+{
+  "evidence": [
+    {
+      "confidence": 0.943,
+      "contradiction": "",
+      "entity": "host",
+      "mission_id": "replay-artifacts",
+      "payload": {
+        "alive": true,
+        "os_guess": "Linux"
+      },
+      "provenance": {
+        "hash": "9d030c8769bac331fbc2b030db68af40d10d0aa8ed3c4e3b8dca03f0700db257",
+        "mission_id": "replay-artifacts",
+        "payload": {
+          "alive": true,
+          "os_guess": "Linux"
+        },
+        "prev_hash": "",
+        "source_plugin": "manual",
+        "timestamp": "2026-07-02T02:05:33.332066+00:00"
+      },
+      "record_id": "ff39a0feea254781acfb000b59f8cf2c",
+      "related_entities": [],
+      "source_plugin": "manual",
+      "timestamp": "2026-07-02T02:05:33.332056+00:00",
+      "ttl_seconds": 604800,
+      "value": "10.0.0.40"
+    },
+    {
+      "confidence": 0.91,
+      "contradiction": "",
+      "entity": "service",
+      "mission_id": "replay-artifacts",
+      "payload": {
+        "host": "10.0.0.40",
+        "port": 80,
+        "protocol": "tcp",
+        "service": "http",
+        "state": "open",
+        "version": "Apache"
+      },
+      "provenance": {
+        "hash": "278702cfa375b3ff6b28bc3cdd765dddd961d850a464c7675a1251134884d1df",
+        "mission_id": "replay-artifacts",
+        "payload": {
+          "host": "10.0.0.40",
+          "port": 80,
+          "protocol": "tcp",
+          "service": "http",
+          "state": "open",
+          "version": "Apache"
+        },
+        "prev_hash": "9d030c8769bac331fbc2b030db68af40d10d0aa8ed3c4e3b8dca03f0700db257",
+        "source_plugin": "nmap",
+        "timestamp": "2026-07-02T02:05:33.334190+00:00"
+      },
+      "record_id": "6d4f72689b8f4fd197128e5c5ccf76f2",
+      "related_entities": [
+        "10.0.0.40"
+      ],
+      "source_plugin": "nmap",
+      "timestamp": "2026-07-02T02:05:33.334172+00:00",
+      "ttl_seconds": 1209600,
+      "value": "10.0.0.40:80/tcp"
+    },
+    {
+      "confidence": 0.896,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "replay-artifacts",
+      "payload": {
+        "description": "Server: Apache",
+        "host": "10.0.0.40",
+        "port": 80,
+        "severity": "INFO",
+        "title": "Web service: HTTP on 10.0.0.40:80"
+      },
+      "provenance": {
+        "hash": "bb438a5a53ed12bd2fb34570ede8a8b84c8dc6b2d2afa4d2cb014e30bfc5c58b",
+        "mission_id": "replay-artifacts",
+        "payload": {
+          "description": "Server: Apache",
+          "host": "10.0.0.40",
+          "port": 80,
+          "severity": "INFO",
+          "title": "Web service: HTTP on 10.0.0.40:80"
+        },
+        "prev_hash": "278702cfa375b3ff6b28bc3cdd765dddd961d850a464c7675a1251134884d1df",
+        "source_plugin": "nmap",
+        "timestamp": "2026-07-02T02:05:33.337735+00:00"
+      },
+      "record_id": "f0d6672753254223a8decd61363101c6",
+      "related_entities": [
+        "10.0.0.40"
+      ],
+      "source_plugin": "nmap",
+      "timestamp": "2026-07-02T02:05:33.337721+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.40:80:Web service: HTTP on 10.0.0.40:80"
+    },
+    {
+      "confidence": 0.84,
+      "contradiction": "",
+      "entity": "service",
+      "mission_id": "replay-artifacts",
+      "payload": {
+        "host": "10.0.0.40",
+        "port": 80,
+        "service": "http",
+        "state": "open",
+        "status_code": 200,
+        "version": "Apache"
+      },
+      "provenance": {
+        "hash": "f63525ce10069b1f757b08d1ce458ba4581ee95e346bc35301b1438048de6e04",
+        "mission_id": "replay-artifacts",
+        "payload": {
+          "host": "10.0.0.40",
+          "port": 80,
+          "service": "http",
+          "state": "open",
+          "status_code": 200,
+          "version": "Apache"
+        },
+        "prev_hash": "4068aa99c47af531a838121014c5e8e8c4421e74e19b07c65908f469455144b3",
+        "source_plugin": "http",
+        "timestamp": "2026-07-02T02:05:33.979488+00:00"
+      },
+      "record_id": "9eb076074f344506ac234b56ca61adfd",
+      "related_entities": [
+        "10.0.0.40"
+      ],
+      "source_plugin": "http",
+      "timestamp": "2026-07-02T02:05:33.979474+00:00",
+      "ttl_seconds": 1209600,
+      "value": "10.0.0.40:80/tcp"
+    },
+    {
+      "confidence": 0.8505,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "replay-artifacts",
+      "payload": {
+        "description": "Status 200",
+        "host": "10.0.0.40",
+        "port": 80,
+        "severity": "INFO",
+        "title": "HTTP 200 \u2014 Server: Apache"
+      },
+      "provenance": {
+        "hash": "2bcfb1245e0af07a88c3616a41d2ba9a8efc9d9e9ed0dfd5af25d4eda1b47a91",
+        "mission_id": "replay-artifacts",
+        "payload": {
+          "description": "Status 200",
+          "host": "10.0.0.40",
+          "port": 80,
+          "severity": "INFO",
+          "title": "HTTP 200 \u2014 Server: Apache"
+        },
+        "prev_hash": "49daeac147ed04541c802a6b4000a2a2ddbde54972a9f2cae4cbd56b2f90d392",
+        "source_plugin": "http",
+        "timestamp": "2026-07-02T02:05:33.551676+00:00"
+      },
+      "record_id": "312d327f86704dd3966c3d76c691c03f",
+      "related_entities": [
+        "10.0.0.40"
+      ],
+      "source_plugin": "http",
+      "timestamp": "2026-07-02T02:05:33.551663+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.40:80:HTTP 200 \u2014 Server: Apache"
+    },
+    {
+      "confidence": 0.76,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "replay-artifacts",
+      "payload": {
+        "host": "10.0.0.40",
+        "path": "/admin",
+        "port": 80,
+        "status": 200
+      },
+      "provenance": {
+        "hash": "5740b61d38ebecabf63b24c595205ac65b52dec5481e9442f7287e8ddfee2414",
+        "mission_id": "replay-artifacts",
+        "payload": {
+          "host": "10.0.0.40",
+          "path": "/admin",
+          "port": 80,
+          "status": 200
+        },
+        "prev_hash": "2bcfb1245e0af07a88c3616a41d2ba9a8efc9d9e9ed0dfd5af25d4eda1b47a91",
+        "source_plugin": "fuzz",
+        "timestamp": "2026-07-02T02:05:33.763267+00:00"
+      },
+      "record_id": "74d2a0acf3cc4d229cc34e85f4effc82",
+      "related_entities": [
+        "10.0.0.40"
+      ],
+      "source_plugin": "fuzz",
+      "timestamp": "2026-07-02T02:05:33.763259+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.40:80:/admin"
+    },
+    {
+      "confidence": 0.7985,
+      "contradiction": "",
+      "entity": "finding",
+      "mission_id": "replay-artifacts",
+      "payload": {
+        "description": "HTTP 200 at /admin",
+        "host": "10.0.0.40",
+        "port": 80,
+        "severity": "MEDIUM",
+        "title": "Web path: /admin [200]"
+      },
+      "provenance": {
+        "hash": "4068aa99c47af531a838121014c5e8e8c4421e74e19b07c65908f469455144b3",
+        "mission_id": "replay-artifacts",
+        "payload": {
+          "description": "HTTP 200 at /admin",
+          "host": "10.0.0.40",
+          "port": 80,
+          "severity": "MEDIUM",
+          "title": "Web path: /admin [200]"
+        },
+        "prev_hash": "5740b61d38ebecabf63b24c595205ac65b52dec5481e9442f7287e8ddfee2414",
+        "source_plugin": "fuzz",
+        "timestamp": "2026-07-02T02:05:33.766155+00:00"
+      },
+      "record_id": "19bb4026f8fd4d86afb6f37479d4b190",
+      "related_entities": [
+        "10.0.0.40"
+      ],
+      "source_plugin": "fuzz",
+      "timestamp": "2026-07-02T02:05:33.766139+00:00",
+      "ttl_seconds": 2592000,
+      "value": "10.0.0.40:80:Web path: /admin [200]"
+    }
+  ],
+  "findings": [
+    {
+      "description": "Server: Apache",
+      "evidence": "",
+      "fid": "297c0b03",
+      "host": "10.0.0.40",
+      "plugin": "nmap",
+      "port": 80,
+      "severity": "INFO",
+      "title": "Web service: HTTP on 10.0.0.40:80",
+      "ts": "02:05:33"
+    },
+    {
+      "description": "Status 200",
+      "evidence": "",
+      "fid": "a65ad69a",
+      "host": "10.0.0.40",
+      "plugin": "http",
+      "port": 80,
+      "severity": "INFO",
+      "title": "HTTP 200 \u2014 Server: Apache",
+      "ts": "02:05:33"
+    },
+    {
+      "description": "HTTP 200 at /admin",
+      "evidence": "",
+      "fid": "a51b50c2",
+      "host": "10.0.0.40",
+      "plugin": "fuzz",
+      "port": 80,
+      "severity": "MEDIUM",
+      "title": "Web path: /admin [200]",
+      "ts": "02:05:33"
+    }
+  ],
+  "hosts": {
+    "10.0.0.40": {
+      "alive": true,
+      "hostname": "",
+      "ip": "10.0.0.40",
+      "notes": "",
+      "os_guess": "Linux",
+      "ports": [
+        {
+          "cve_sources": [],
+          "cves": [],
+          "cvss": null,
+          "exploitability": null,
+          "port": 80,
+          "protocol": "tcp",
+          "service": "http",
+          "state": "open",
+          "version": "Apache"
+        }
+      ],
+      "tags": []
+    }
+  },
+  "latest_report": {},
+  "stats": {
+    "contradictions": 0,
+    "critical": 0,
+    "evidence_records": 7,
+    "findings": 3,
+    "high": 0,
+    "hosts": 1
+  },
+  "topology": {
+    "edges": [
+      {
+        "from": "subnet:10.0.0.0/24",
+        "kind": "contains",
+        "to": "host:10.0.0.40"
+      },
+      {
+        "from": "host:10.0.0.40",
+        "kind": "exposes",
+        "to": "svc:10.0.0.40:http:80"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "subnet:10.0.0.0/24",
+        "kind": "subnet",
+        "label": "10.0.0.0/24",
+        "severity": "INFO"
+      },
+      {
+        "id": "host:10.0.0.40",
+        "kind": "host",
+        "label": "10.0.0.40",
+        "severity": "MEDIUM"
+      },
+      {
+        "id": "svc:10.0.0.40:http:80",
+        "kind": "service",
+        "label": "http:80",
+        "severity": "MEDIUM"
+      }
+    ]
+  }
+}

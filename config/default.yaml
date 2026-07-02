@@ -1,0 +1,25 @@
+mission:
+  max_iterations: 30
+  profile: normal
+
+planner:
+  deterministic: true
+  policy_file: config/policy.yaml
+
+runtime:
+  mode: live
+  default_timeout: 60
+  max_timeout: 300
+
+queue:
+  backend: in_memory
+  max_events: 2000
+
+telemetry:
+  format: json
+  traces_enabled: true
+
+security:
+  sandbox_enforced: true
+  verify_binaries: true
+  vault_enabled: true

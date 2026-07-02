@@ -1,0 +1,30 @@
+advisor:
+  enabled: true
+  backend: nim # auto | anthropic | ollama | council | deterministic | nim
+  min_confidence_default: 0.6
+  fallback_to_deterministic: true
+  prompt_version: 2026-04-26.enterprise.v1
+  primary_model: claude-sonnet-4-20250514
+  fallback_models:
+    - deterministic-local
+  response_validator: strict-allowed-action
+
+ollama:
+  enabled: true
+  host: http://127.0.0.1:11434
+  model: llama3.2:3b
+  timeout: 60
+  temperature: 0.1
+  keep_alive: 10m
+
+nim:
+  enabled: true
+  model: meta/llama-3.1-70b-instruct
+  temperature: 0.1
+  max_tokens: 1024
+  timeout: 60
+  # Available models:
+  # meta/llama-3.1-70b-instruct
+  # meta/llama-3.1-8b-instruct
+  # nvidia/llama-3.1-nemotron-70b-instruct
+  # mistralai/mixtral-8x7b-instruct-v0.1

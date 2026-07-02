@@ -1,0 +1,45 @@
+{
+  "attack_surface": [
+    {
+      "host": "10.0.0.9",
+      "os_guess": "Linux",
+      "ports": [
+        "80/http"
+      ]
+    }
+  ],
+  "executive_summary": "Mission copilot completed with 1 discovered hosts and 2 findings.\nCritical findings: 0. High findings: 0.\n- INFO: Web service: HTTP on 10.0.0.9:80 (10.0.0.9:80)\n- INFO: HTTP 200 \u2014 Server: Apache (10.0.0.9:80)",
+  "mission": "copilot",
+  "stats": {
+    "contradictions": 0,
+    "critical": 0,
+    "evidence_records": 5,
+    "findings": 2,
+    "high": 0,
+    "hosts": 1
+  },
+  "top_findings": [
+    {
+      "description": "Server: Apache",
+      "evidence": "",
+      "fid": "359b0fc9",
+      "host": "10.0.0.9",
+      "plugin": "nmap",
+      "port": 80,
+      "severity": "INFO",
+      "title": "Web service: HTTP on 10.0.0.9:80",
+      "ts": "02:05:31"
+    },
+    {
+      "description": "Status 200",
+      "evidence": "",
+      "fid": "25a35248",
+      "host": "10.0.0.9",
+      "plugin": "http",
+      "port": 80,
+      "severity": "INFO",
+      "title": "HTTP 200 \u2014 Server: Apache",
+      "ts": "02:05:32"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": ["status", "data", "error"],
+  "properties": {
+    "status": { "type": "string" },
+    "error": { "type": "string" },
+    "data": {
+      "type": "object",
+      "required": ["paths", "interesting", "count"],
+      "properties": {
+        "paths": { "type": "array" },
+        "interesting": { "type": "array" },
+        "count": { "type": "integer" }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["status", "data", "error"],
+  "properties": {
+    "status": { "type": "string" },
+    "error": { "type": "string" },
+    "data": {
+      "type": "object",
+      "required": ["status_code", "headers", "server", "powered"],
+      "properties": {
+        "status_code": { "type": "integer" },
+        "headers": { "type": "object" },
+        "server": { "type": "string" },
+        "powered": { "type": "string" }
+      }
+    }
+  }
+}
+

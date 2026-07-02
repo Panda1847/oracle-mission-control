@@ -1,0 +1,33 @@
+{
+  "stats": {
+    "hosts": 1,
+    "findings": 1,
+    "critical": 0,
+    "high": 0
+  },
+  "hosts": {
+    "10.0.0.1": {
+      "ports": [
+        {
+          "port": 80,
+          "service": "http"
+        }
+      ],
+      "os_guess": "Linux"
+    }
+  },
+  "findings": [
+    {
+      "severity": "INFO",
+      "title": "Web service",
+      "host": "10.0.0.1",
+      "port": 80
+    }
+  ],
+  "evidence": [
+    {
+      "entity": "host",
+      "value": "10.0.0.1"
+    }
+  ]
+}

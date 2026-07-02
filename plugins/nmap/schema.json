@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["status", "data", "error"],
+  "properties": {
+    "status": { "type": "string" },
+    "error": { "type": "string" },
+    "data": {
+      "type": "object",
+      "required": ["ports", "os_guess"],
+      "properties": {
+        "ports": { "type": "array" },
+        "os_guess": { "type": "string" }
+      }
+    }
+  }
+}
+

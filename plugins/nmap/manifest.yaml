@@ -1,0 +1,22 @@
+name: nmap
+version: "1.0.0"
+category: recon
+capabilities:
+  - host_discovery
+  - port_scan
+  - service_enumeration
+required_binaries:
+  - nmap
+risk_level: low
+expected_artifacts:
+  - open_ports
+  - services
+  - os_guess
+parser_schema: schema.json
+timeout: 60
+retry_policy:
+  max_attempts: 2
+  timeout_multiplier: 1.5
+confidence_weight: 0.92
+approval_required: false
+

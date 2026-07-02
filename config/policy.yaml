@@ -1,0 +1,183 @@
+mission:
+  initial_phase: INIT
+  terminal_phases:
+    - COMPLETE
+    - FAILED
+
+risk:
+  tools:
+    nmap: low
+    http: low
+    fuzz: medium
+
+phases:
+  INIT:
+    allowed_tools: []
+    min_confidence: 1.0
+    approval_required: false
+    approval_on_confidence_below: 0.0
+    checkpoint:
+      mode: always
+    retries:
+      max_attempts: 0
+      timeout_multiplier: 1.0
+    fallback_tools: {}
+    defaults: {}
+
+  DISCOVERY:
+    allowed_tools:
+      - nmap
+    min_confidence: 0.55
+    approval_required: false
+    approval_on_confidence_below: 0.35
+    checkpoint:
+      require_scope_scan: true
+      min_hosts: 1
+    retries:
+      max_attempts: 2
+      timeout_multiplier: 1.5
+    fallback_tools:
+      nmap: []
+    defaults:
+      nmap:
+        ports: "21,22,23,25,53,80,110,111,135,139,143,443,445,993,995,1723,3306,3389,5900,8080,8443,8888"
+        timing: T4
+        timeout: 60
+
+  ENUMERATION:
+    allowed_tools:
+      - nmap
+      - http
+      - fuzz
+    min_confidence: 0.60
+    approval_required: false
+    approval_on_confidence_below: 0.40
+    checkpoint:
+      require_web_services_reviewed: true
+    retries:
+      max_attempts: 2
+      timeout_multiplier: 1.5
+    fallback_tools:
+      fuzz:
+        - http
+      http:
+        - nmap
+      nmap:
+        - http
+    defaults:
+      http:
+        method: GET
+        path: /
+        timeout: 20
+      fuzz:
+        wordlist: common
+        extensions: php,html,txt
+        threads: 20
+        timeout: 90
+      nmap:
+        timing: T3
+        timeout: 60
+
+  VALIDATION:
+    allowed_tools:
+      - http
+      - nmap
+    min_confidence: 0.65
+    approval_required: false
+    approval_on_confidence_below: 0.45
+    checkpoint:
+      require_validation_pass: true
+    retries:
+      max_attempts: 1
+      timeout_multiplier: 2.0
+    fallback_tools:
+      http:
+        - nmap
+      nmap:
+        - http
+    defaults:
+      http:
+        method: GET
+        path: /
+        timeout: 25
+      nmap:
+        timing: T3
+        timeout: 90
+
+  EXPLOIT_ANALYSIS:
+    allowed_tools: []
+    min_confidence: 1.0
+    approval_required: false
+    approval_on_confidence_below: 0.55
+    checkpoint:
+      mode: internal
+    retries:
+      max_attempts: 0
+      timeout_multiplier: 1.0
+    fallback_tools: {}
+    defaults: {}
+
+  POST_PROCESS:
+    allowed_tools: []
+    min_confidence: 1.0
+    approval_required: false
+    approval_on_confidence_below: 0.55
+    checkpoint:
+      mode: internal
+    retries:
+      max_attempts: 0
+      timeout_multiplier: 1.0
+    fallback_tools: {}
+    defaults: {}
+
+  REPORTING:
+    allowed_tools: []
+    min_confidence: 1.0
+    approval_required: false
+    approval_on_confidence_below: 0.55
+    checkpoint:
+      mode: internal
+    retries:
+      max_attempts: 0
+      timeout_multiplier: 1.0
+    fallback_tools: {}
+    defaults: {}
+
+  COMPLETE:
+    allowed_tools: []
+    min_confidence: 1.0
+    approval_required: false
+    approval_on_confidence_below: 0.0
+    checkpoint:
+      mode: terminal
+    retries:
+      max_attempts: 0
+      timeout_multiplier: 1.0
+    fallback_tools: {}
+    defaults: {}
+
+  FAILED:
+    allowed_tools: []
+    min_confidence: 1.0
+    approval_required: false
+    approval_on_confidence_below: 0.0
+    checkpoint:
+      mode: terminal
+    retries:
+      max_attempts: 0
+      timeout_multiplier: 1.0
+    fallback_tools: {}
+    defaults: {}
+
+  PAUSED:
+    allowed_tools: []
+    min_confidence: 1.0
+    approval_required: false
+    approval_on_confidence_below: 0.0
+    checkpoint:
+      mode: paused
+    retries:
+      max_attempts: 0
+      timeout_multiplier: 1.0
+    fallback_tools: {}
+    defaults: {}

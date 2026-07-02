@@ -1,0 +1,2 @@
+"""Enterprise plugin registry package."""
+

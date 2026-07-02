@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Apache HTTP Server 2.4.49 path traversal/RCE chain",
+    "patterns": [
+      "apache(\\s+httpd)?\\s+2\\.4\\.49",
+      "apache/2\\.4\\.49"
+    ],
+    "cves": [
+      "CVE-2021-41773",
+      "CVE-2021-42013"
+    ],
+    "cvss": 8.1
+  },
+  {
+    "name": "Log4Shell (Log4j 2.0-2.14.1)",
+    "patterns": [
+      "log4j\\s*2\\.(0|1|2|3|4|5|6|7|8|9|1[0-4])\\b"
+    ],
+    "cves": [
+      "CVE-2021-44228"
+    ],
+    "cvss": 10.0
+  },
+  {
+    "name": "SambaCry (Samba 3.5.0-4.6.4/4.5.10/4.4.14)",
+    "patterns": [
+      "samba\\s+(3\\.[5-9]\\.|4\\.[0-6]\\.)"
+    ],
+    "cves": [
+      "CVE-2017-7494"
+    ],
+    "cvss": 8.8
+  }
+]
+

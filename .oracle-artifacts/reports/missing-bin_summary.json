@@ -1,0 +1,14 @@
+{
+  "attack_surface": [],
+  "executive_summary": "Mission missing-bin completed with 0 discovered hosts and 0 findings.\nCritical findings: 0. High findings: 0.",
+  "mission": "missing-bin",
+  "stats": {
+    "contradictions": 0,
+    "critical": 0,
+    "evidence_records": 0,
+    "findings": 0,
+    "high": 0,
+    "hosts": 0
+  },
+  "top_findings": []
+}

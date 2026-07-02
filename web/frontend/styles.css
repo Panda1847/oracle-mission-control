@@ -1,0 +1,167 @@
+:root {
+  --bg: #07131a;
+  --panel: rgba(13, 24, 31, 0.88);
+  --panel-2: rgba(11, 28, 34, 0.92);
+  --text: #e9f5f1;
+  --muted: #7ea0a5;
+  --border: rgba(110, 159, 160, 0.18);
+  --accent: #7ef7cf;
+  --accent-2: #ffb865;
+  --danger: #ff7878;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(126, 247, 207, 0.14), transparent 35%),
+    radial-gradient(circle at top right, rgba(255, 184, 101, 0.18), transparent 30%),
+    linear-gradient(180deg, #041018 0%, #07131a 45%, #09151e 100%);
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+.shell { max-width: 1400px; margin: 0 auto; padding: 28px 18px 40px; }
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  font-size: 0.78rem;
+  margin-bottom: 0.5rem;
+}
+h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; }
+.subcopy { color: var(--muted); max-width: 60ch; font-size: 1rem; }
+.hero-card,
+.panel {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+.hero-card { padding: 22px; display: flex; flex-direction: column; justify-content: center; }
+.metric { font-size: 2.4rem; font-weight: 700; color: var(--accent); }
+.metric-label { color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.hero-strip {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero-strip span,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+}
+.build-tag {
+  margin-top: 16px;
+  color: var(--muted);
+  font: 0.82rem/1.4 "IBM Plex Mono", "Fira Code", monospace;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.wide { grid-column: span 2; }
+.panel { padding: 16px; }
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.panel-head h2 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+.stack { display: grid; gap: 10px; }
+.timeline { max-height: 360px; overflow: auto; }
+.card {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+.card strong { display: block; margin-bottom: 0.25rem; }
+.card small { color: var(--muted); }
+.finding-row { display: grid; gap: 6px; }
+.finding-title { font-weight: 700; }
+.finding-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.severity {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.severity-critical { background: rgba(255, 120, 120, 0.2); }
+.severity-high { background: rgba(255, 184, 101, 0.2); }
+.severity-medium { background: rgba(126, 247, 207, 0.14); }
+.severity-low,
+.severity-info { background: rgba(255,255,255,0.04); }
+.artifact-link { color: var(--accent); text-decoration: none; font-weight: 700; }
+.artifact-path {
+  color: var(--muted);
+  font: 0.82rem/1.4 "IBM Plex Mono", "Fira Code", monospace;
+  word-break: break-word;
+}
+.codeblock {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: 0.9rem/1.5 "IBM Plex Mono", "Fira Code", monospace;
+  color: #d5ebe2;
+  background: rgba(0,0,0,0.14);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 12px;
+  min-height: 120px;
+}
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+input, button {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+  font: inherit;
+}
+input {
+  flex: 1;
+  color: var(--text);
+  background: rgba(255,255,255,0.04);
+}
+button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #07131a;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (max-width: 980px) {
+  .hero,
+  .grid { grid-template-columns: 1fr; }
+  .wide { grid-column: auto; }
+}

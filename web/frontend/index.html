@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ORACLE Control Plane</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Distributed Autonomous Mission Orchestration</p>
+        <h1>ORACLE Control Plane</h1>
+        <p class="subcopy">Deterministic mission state, worker telemetry, evidence intelligence, approvals, artifacts, and operator notes in one place.</p>
+      </div>
+      <div class="hero-card">
+        <div class="metric" id="mission-phase">INIT</div>
+        <div class="metric-label">Current Phase</div>
+        <div class="hero-strip">
+          <span id="metric-hosts">0 hosts</span>
+          <span id="metric-findings">0 findings</span>
+          <span id="metric-workers">0 workers</span>
+        </div>
+        <div class="build-tag" id="build-id">build unknown</div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="panel wide">
+        <div class="panel-head">
+          <h2>Mission Overview</h2>
+          <span class="badge" id="mission-status">loading</span>
+        </div>
+        <div id="overview" class="stack"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Workers</h2></div>
+        <div id="workers" class="stack"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Approvals</h2></div>
+        <div id="approvals" class="stack"></div>
+      </section>
+
+      <section class="panel wide">
+        <div class="panel-head"><h2>Analyst Findings</h2></div>
+        <div id="findings" class="stack"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Attack Graph</h2></div>
+        <div id="attack-graph" class="stack"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Replay</h2></div>
+        <div id="replay" class="stack"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>AI Council</h2></div>
+        <div id="council" class="stack"></div>
+      </section>
+
+      <section class="panel wide">
+        <div class="panel-head"><h2>Timeline</h2></div>
+        <div id="timeline" class="stack timeline"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Topology</h2></div>
+        <div id="topology" class="stack"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Artifacts</h2></div>
+        <div id="artifacts" class="stack"></div>
+      </section>
+
+      <section class="panel wide">
+        <div class="panel-head"><h2>Operator Notes</h2></div>
+        <div id="chat" class="stack timeline"></div>
+        <form id="chat-form" class="form-row">
+          <input id="chat-input" type="text" placeholder="Add an operator note">
+          <button type="submit">Post</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
