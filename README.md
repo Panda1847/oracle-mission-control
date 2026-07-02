@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="docs/assets/banner.png" alt="ORACLE banner" width="100%">
+<img src="assets/oracle_banner.png" alt="ORACLE banner" width="100%">
 
-# ORACLE
+# ORACLE Control Plane
 
-**Deterministic mission control for authorized security testing.**
+**Distributed Autonomous Mission Orchestration**
 
 A planner — not an LLM — decides what happens next. AI is advisory only.
 Every action is scope-guarded, risk-classified, and evidence-graphed.
 
-[![CI](https://github.com/[your-org]/oracle/actions/workflows/ci.yml/badge.svg)](https://github.com/[your-org]/oracle/actions/workflows/ci.yml)
+[![CI](https://github.com/Panda1847/oracle-mission-control/actions/workflows/ci.yml/badge.svg)](https://github.com/Panda1847/oracle-mission-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](requirements.txt)
 [![Go 1.24](https://img.shields.io/badge/go-1.24-00ADD8)](runtime-go/go.mod)
@@ -47,9 +47,9 @@ model, in control of what actually happens.
 
 ## Screenshot
 
-<img src="docs/assets/screenshot-dashboard.png" alt="ORACLE mission dashboard" width="100%">
+<img src="assets/oracle_dashboard_screenshot_placeholder.png" alt="ORACLE mission dashboard" width="100%">
 
-*[Replace with a real screenshot of `--web` running against demo data.]*
+*A screenshot of the ORACLE web dashboard would go here. Due to technical limitations in the current environment, a live screenshot could not be captured.*
 
 ## Quick Start
 
