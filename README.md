@@ -2,9 +2,9 @@
 
 <img src="assets/oracle_banner.png" alt="ORACLE banner" width="100%">
 
-# ORACLE Control Plane
+# ORACLE
 
-**Distributed Autonomous Mission Orchestration**
+**Deterministic Mission Orchestration for Authorized Security Testing.**
 
 A planner — not an LLM — decides what happens next. AI is advisory only.
 Every action is scope-guarded, risk-classified, and evidence-graphed.
@@ -14,9 +14,27 @@ Every action is scope-guarded, risk-classified, and evidence-graphed.
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](requirements.txt)
 [![Go 1.24](https://img.shields.io/badge/go-1.24-00ADD8)](runtime-go/go.mod)
 
-[Quick Start](#quick-start) • [Architecture](#architecture) • [Docs](docs/) • [Contributing](CONTRIBUTING.md)
+[Quick Start](#quick-start) • [Architecture](#architecture) • [Editions](#editions) • [Docs](docs/) • [Contributing](CONTRIBUTING.md)
 
 </div>
+
+---
+
+## Editions
+
+ORACLE is available in three tiers to suit different operational needs:
+
+| Feature | Free Community | Pro | Enterprise |
+|---|---|---|---|
+| **Deterministic Planner** | ✅ | ✅ | ✅ |
+| **Evidence Graph** | Local Only | Cloud Sync | Distributed |
+| **Execution Workers** | Single Node | Multi-Node | Unlimited Scale |
+| **Custom Plugins** | ✅ | ✅ | ✅ |
+| **Compliance Reporting** | Basic | Advanced | Custom Templates |
+| **Approval Engine** | Manual | Rule-Based | RBAC & SSO |
+| **Support** | Community | Priority Email | 24/7 Dedicated |
+
+This repository hosts the **Free Community Edition**. For Pro and Enterprise licensing, please contact our sales team.
 
 ---
 
