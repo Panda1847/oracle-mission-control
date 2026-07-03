@@ -9,11 +9,11 @@
 A planner — not an LLM — decides what happens next. AI is advisory only.
 Every action is scope-guarded, risk-classified, and evidence-graphed.
 
-[![CI](https://github.com/Panda1847/oracle/actions/workflows/ci.yml/badge.svg)](https://github.com/Panda1847/oracle/actions)
+[![CI](https://github.com/Panda1847/oracle-mission-control/actions/workflows/ci.yml/badge.svg)](https://github.com/Panda1847/oracle-mission-control/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](requirements.txt)
 [![Go 1.24](https://img.shields.io/badge/go-1.24-00ADD8?logo=go&logoColor=white)](runtime-go/go.mod)
-[![Free Community Edition](https://img.shields.io/badge/edition-Free%20Community-22c55e)](https://github.com/Panda1847/oracle)
+[![Free Community Edition](https://img.shields.io/badge/edition-Free%20Community-22c55e)](https://github.com/Panda1847/oracle-mission-control)
 
 [Quick Start](#quick-start) • [Architecture](#architecture) • [Editions](#editions) • [Docs](docs/) • [Contributing](CONTRIBUTING.md)
 
